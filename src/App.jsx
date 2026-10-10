@@ -10,7 +10,7 @@ const motion = {
 };
 import {
   ArrowRight, Download, Github, Linkedin, Mail, MapPin, Menu, X,
-  ExternalLink, Eye, Sparkles, MessageCircle, FileText,
+  ExternalLink, Eye, Sparkles, MessageCircle, FileText, Code2, Terminal,
 } from "lucide-react";
 const smartCollegeImg = "/college-management.jpg";
 
@@ -135,8 +135,11 @@ function Hero() {
         <div className="portrait-orbit orbit-one" />
         <div className="portrait-orbit orbit-two" />
         <div className="portrait-glow" />
-        <img src="/profile.jpg" alt="Mani Chandan profile" onError={(e) => { e.currentTarget.style.display = "none"; e.currentTarget.nextElementSibling.style.display = "grid"; }} />
-        <div className="photo-placeholder"><span>Manichandan</span><small>Add your photo</small></div>
+        <div className="avatar-glass-emblem">
+          <Code2 size={56} className="emblem-icon" />
+          <span className="emblem-title">Mani Chandan</span>
+          <span className="emblem-sub">Full Stack Java Developer</span>
+        </div>
       </div>
 
       <motion.aside className="hero-info glass-inner" initial={{ opacity: 0, x: 18 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.65 }}>
@@ -156,8 +159,10 @@ function About() {
       <div className="about-grid">
         <motion.div className="glass panel about-card" variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
           <div className="about-avatar-wrap">
-            <img src="/profile.jpg" alt="Mani Chandan" className="about-photo" onError={(e) => { e.currentTarget.style.display = "none"; e.currentTarget.nextElementSibling.style.display = "grid"; }} />
-            <div className="about-avatar">Manichandan</div>
+            <div className="about-avatar">
+              <Terminal size={32} />
+              <span>Full Stack Java Developer</span>
+            </div>
           </div>
           <p>I am Mani Chandan, a final year B.Tech CSE student with a strong interest in web development. I love building modern, user-friendly web applications and continuously learning new technologies. My goal is to become a successful Full Stack Java Developer and contribute to real-world projects.</p>
         </motion.div>
