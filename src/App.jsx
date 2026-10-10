@@ -1,5 +1,13 @@
 import React, { useState } from "react";
-import { motion } from "framer-motion";
+const motion = {
+  div: ({ children, className, style, onClick, id }) => <div className={className} style={style} onClick={onClick} id={id}>{children}</div>,
+  span: ({ children, className, style }) => <span className={className} style={style}>{children}</span>,
+  h1: ({ children, className, style }) => <h1 className={className} style={style}>{children}</h1>,
+  h2: ({ children, className, style }) => <h2 className={className} style={style}>{children}</h2>,
+  p: ({ children, className, style }) => <p className={className} style={style}>{children}</p>,
+  aside: ({ children, className, style }) => <aside className={className} style={style}>{children}</aside>,
+  article: ({ children, className, style }) => <article className={className} style={style}>{children}</article>,
+};
 import {
   ArrowRight, Download, Github, Linkedin, Mail, MapPin, Menu, X,
   ExternalLink, Eye, Sparkles, MessageCircle, FileText,
